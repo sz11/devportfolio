@@ -1,7 +1,6 @@
 body {
-    background-color: #0e6ffc;
-    height:  100vh;
-    display: grid;
+    height:  100%;
+    margin: 0;
     font-family: "Poppins",sans-serif;
     font-size:  30px;
     font-weight: 500;
@@ -31,8 +30,11 @@ li {
     margin-bottom: 10px;
 }*/
 
-.wrapper {
-    color: #fbec5d;
+.home {
+    background-image: url("images/blank_go_board.png");
+    background-size: cover;
+    height: 100%;
+    background-position: center;
 }
 
 .rotating_words {
