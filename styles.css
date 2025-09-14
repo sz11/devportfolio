@@ -1,110 +1,175 @@
+/* Reset & base styles */
 body {
-    height:  100%;
-    margin: 0;
-    font-family: "Poppins",sans-serif;
-    font-size:  30px;
-    font-weight: 500;
-    place-items: center;
-}
-
-/*header {
-    text-align: center;
-    margin-bottom: 20px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
 section {
-    margin-bottom: 40px;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+  padding: 10px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #f0f4ff, #e0eaff);
+  padding: 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.hero h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.scroll-down {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #333;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
 }
 
-li {
-    margin-bottom: 10px;
-}*/
-
-.home {
-    background-image: url("images/blank_go_board.png");
-    background-size: cover;
-    height: 100%;
-    background-position: center;
+/* ---- rotating words: centered, emoji, non-overlapping ---- */
+.rotating-words {
+  display: block;                 /* sits on its own line */
+  position: relative;
+  height: 1.8em;                  /* reserve vertical space so layout doesn't jump */
+  overflow: hidden;
+  margin-top: 6px;
+  text-align: center;             /* fallback centering */
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
-.rotating_words {
-    display: inline;
+/* Each word is absolutely centered horizontally using left:50% + translateX(-50%) */
+.rotating-words span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 12px); /* initial: slightly below */
+  opacity: 0;
+  white-space: nowrap;
+  animation: rotateWord 24s linear infinite;
+  /* if you prefer easing change timing-function above */
 }
 
-.rotating_words span {
-    position: absolute;
+/* If you change number of words or slot length, update these delays accordingly.
+   For 8 words with 24s total => each word slot = 3s (0s,3s,6s,...,21s) */
+.rotating-words span:nth-child(1) { animation-delay: 0s; }
+.rotating-words span:nth-child(2) { animation-delay: 3s; }
+.rotating-words span:nth-child(3) { animation-delay: 6s; }
+.rotating-words span:nth-child(4) { animation-delay: 9s; }
+.rotating-words span:nth-child(5) { animation-delay: 12s; }
+.rotating-words span:nth-child(6) { animation-delay: 15s; }
+.rotating-words span:nth-child(7) { animation-delay: 18s; }
+.rotating-words span:nth-child(8) { animation-delay: 21s; }
+
+/* Keyframes: visible during ~0–12.5% of its own (24s) timeline => ~3s window.
+   Adjust percentages if you change total duration or number of words. */
+@keyframes rotateWord {
+  0% {
     opacity: 0;
-    padding-left: 10px;
-    animation: rotate-word 20s linear infinite;
+    transform: translate(-50%, 12px);
+  }
+  4% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  12.5% {
+    opacity: 0;
+    transform: translate(-50%, -12px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -12px);
+  }
 }
 
-.rotating_words span:nth-child(2) {
-    animation-delay: 2.5s;
+
+/* Projects Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.rotating_words span:nth-child(3) {
-    animation-delay: 5s;
+/* Timeline */
+.timeline-item {
+  margin-bottom: 20px;
 }
 
-.rotating_words span:nth-child(4) {
-    animation-delay: 7.5s;
+/* Interests */
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.interest {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  .interests-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.rotating_words span:nth-child(5) {
-    animation-delay: 10s;
+/* Footer */
+footer {
+  padding: 20px;
+  background: #f5f5f5;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
 }
-
-.rotating_words span:nth-child(6) {
-    animation-delay: 12.5s;
-}
-
-.rotating_words span:nth-child(7) {
-    animation-delay: 15s;
-}
-
-.rotating_words span:nth-child(8) {
-    animation-delay: 17.5s;
-}
-
-@keyframes rotate-word {
-    0% {
-        opacity: 0;
-    }
-    1% {
-        transform: translateY(-20px);
-    }
-    4% {
-        opacity: 0;
-    }
-    5% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    17% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    19% {
-        opacity: 0;
-    }
-    20% {
-        transform: translateY(20px);
-    }
-    80% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-

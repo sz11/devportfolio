@@ -1,69 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuzheng Zheng's Software Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shuzheng Zheng | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="home">
-		<h2 id="intro"> Hello, I'm Shu!<br>I'm a Software Developer<br> and
-			<div class="rotating_words">
-				<span> sports enthusiast.</span>
-				<span> avid foodie.</span>
-				<span> optimist.</span>
-				<span> LEGO lover.</span>
-				<span> pluviophile.</span>
-				<span> all-round athlete.</span>
-				<span> world traveller.</span>
-				<span> go/chess player.</span>
-			</div>
-		</h2>
-	</div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <nav>
-        <ul>
-            <li><a href="personal/personal.html">Personal</a></li>
-        </ul>
-    </nav>
+  <!-- Hero / Landing -->
+  <section id="home" class="hero">
+      <h1>Hello, I’m Shu 👋</h1>
+      <h2>
+        I’m a Software Developer<br>
+        and<br>
+        <span class="rotating-words">
+          <span>🎾 sports enthusiast.</span>
+          <span>🍜 avid foodie.</span>
+          <span>😊 optimist.</span>
+          <span>🧱 LEGO lover.</span>
+          <span>🌧️ pluviophile.</span>
+          <span>🏃 all-round athlete.</span>
+          <span>✈️ world traveller.</span>
+          <span>♟️ go/chess player.</span>
+        </span>
+      </h2>
+      <a href="#about" class="scroll-down">▼</a>
+</section>
 
-    <!-- <section id="about-me">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here. Mention your background, interests, and what drives you as a software developer.</p>
-    </section>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>[Write a short intro about yourself, background, and passions here]</p>
+    <div class="fun-facts">
+      <!-- Placeholder: could later add Go stones or icons -->
+      <div class="fact">🌍 Lived in China, USA, Europe, and Canada</div>
+      <div class="fact">🤖 Interested in AI & Data Engineering</div>
+      <div class="fact">🏸 Play lots of sports</div>
+    </div>
+  </section>
 
-    <section id="my-projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1</h3>
-                <p>Project description goes here. Mention the technologies used, your role, and any notable achievements.</p>
-            </li>
-            <li>
-                <h3>Project 2</h3>
-                <p>Project description goes here. Mention the technologies used, your role, and any notable achievements.</p>
-            </li>
- 
-        </ul>
-    </section>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>BuddyUp</h3>
+        <p>[Description + link]</p>
+      </div>
+      <div class="project-card">
+        <h3>Skyscape Chronicles</h3>
+        <p>[Description + link]</p>
+      </div>
+      <div class="project-card">
+        <h3>GocatorMonitor</h3>
+        <p>[Description + link]</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <h3>Company Name</h3>
-                <p>Position: Your Position</p>
-                <p>Description of your responsibilities and achievements at this position.</p>
-            </li>
-            <li>
-                <h3>Another Company</h3>
-                <p>Position: Your Position</p>
-                <p>Description of your responsibilities and achievements at this position.</p>
-            </li>
-            
-        </ul>
-    </section> -->
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Company A</h3>
+        <p>Role | 2023–2024</p>
+        <p>[Description of responsibilities & achievements]</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Company B</h3>
+        <p>Role | 2021–2022</p>
+        <p>[Description of responsibilities & achievements]</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Interests -->
+  <section id="interests">
+    <h2>Personal Interests</h2>
+    <div class="interests-grid">
+      <div class="interest">🎾 Tennis</div>
+      <div class="interest">🚁 Drones</div>
+      <div class="interest">⚽ Soccer</div>
+      <div class="interest">♟️ Go/Chess</div>
+      <div class="interest">📸 Photography</div>
+      <div class="interest">🏀 Basketball</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:shuzheng9811@gmail.com">shuzheng9811@gmail.com</a></p>
+    <p><a href="https://linkedin.com/in/shuzheng-zheng-365455187" target="_blank">LinkedIn</a> | 
+       <a href="https://github.com/sz11" target="_blank">GitHub</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Shuzheng Zheng. Built with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
