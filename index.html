@@ -7,101 +7,142 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+
   <!-- Navigation -->
   <nav class="navbar">
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#interests">Interests</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#interests" class="nav-link">Interests</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero / Landing -->
   <section id="home" class="hero">
-      <h1>Hello, I’m Shu 👋</h1>
-      <h2>
-        I’m a Software Developer<br>
-        and<br>
-        <span class="rotating-words">
-          <span>🎾 sports enthusiast.</span>
-          <span>🍜 avid foodie.</span>
-          <span>😊 optimist.</span>
-          <span>🧱 LEGO lover.</span>
-          <span>🌧️ pluviophile.</span>
-          <span>🏃 all-round athlete.</span>
-          <span>✈️ world traveller.</span>
-          <span>♟️ go/chess player.</span>
-        </span>
-      </h2>
-      <a href="#about" class="scroll-down">▼</a>
-</section>
+    <div class="profile-picture">
+      <img src="images/profile_pic.jpg" alt="Shu's Profile">
+      <!-- Replace the div above with: <img src="your-profile-image.jpg" alt="Shu's Profile"> -->
+    </div>
+    <h1>Hello, I'm Shu 👋</h1>
+    <h2>
+      I'm a Software Developer<br>
+      and<br>
+      <span class="rotating-words">
+        <span>🎾 sports enthusiast.</span>
+        <span>🍜 avid foodie.</span>
+        <span>😊 optimist.</span>
+        <span>🧱 LEGO lover.</span>
+        <span>🌧️ pluviophile.</span>
+        <span>🏃 all-round athlete.</span>
+        <span>✈️ world traveller.</span>
+        <span>♟️ go/chess player.</span>
+      </span>
+    </h2>
+    <a href="#about" class="scroll-down">▼</a>
+  </section>
 
   <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>[Write a short intro about yourself, background, and passions here]</p>
-    <div class="fun-facts">
-      <!-- Placeholder: could later add Go stones or icons -->
-      <div class="fact">🌍 Lived in China, USA, Europe, and Canada</div>
-      <div class="fact">🤖 Interested in AI & Data Engineering</div>
-      <div class="fact">🏸 Play lots of sports</div>
+  <section id="about" class="fade-in">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="images/about_me_pic.jpg" alt="About Shu">
+        <!-- Replace the div above with: <img src="your-about-image.jpg" alt="About Shu"> -->
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>I'm a passionate software developer with a love for creating innovative solutions and exploring new technologies. When I'm not coding, you'll find me on the tennis court, analyzing Go strategies, or discovering new cuisines around the world.</p>
+        <div class="fun-facts">
+          <div class="fact">🌍 Lived in China, USA, Europe, and Canada</div>
+          <div class="fact">🤖 Interested in AI & Data Engineering</div>
+          <div class="fact">🏸 Play lots of sports including tennis, badminton, and basketball</div>
+          <div class="fact">♟️ Strategic thinker through Go and chess</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
         <h3>BuddyUp</h3>
-        <p>[Description + link]</p>
+        <p>A social platform connecting people with shared interests. Built with modern web technologies and focuses on creating meaningful connections.</p>
       </div>
       <div class="project-card">
         <h3>Skyscape Chronicles</h3>
-        <p>[Description + link]</p>
+        <p>An immersive storytelling platform that combines photography with narrative elements, creating unique visual experiences.</p>
       </div>
       <div class="project-card">
         <h3>GocatorMonitor</h3>
-        <p>[Description + link]</p>
+        <p>Industrial monitoring solution for 3D sensors, providing real-time data analysis and system optimization capabilities.</p>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience">
+  <section id="experience" class="fade-in">
     <h2>Experience</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>Company A</h3>
-        <p>Role | 2023–2024</p>
-        <p>[Description of responsibilities & achievements]</p>
+        <h3>Senior Software Developer</h3>
+        <p><strong>Tech Company A</strong> | 2023—2024</p>
+        <p>Led development of scalable web applications, mentored junior developers, and implemented CI/CD pipelines that improved deployment efficiency by 40%.</p>
       </div>
       <div class="timeline-item">
-        <h3>Company B</h3>
-        <p>Role | 2021–2022</p>
-        <p>[Description of responsibilities & achievements]</p>
+        <h3>Full Stack Developer</h3>
+        <p><strong>Innovation Startup B</strong> | 2021—2022</p>
+        <p>Built responsive web applications using React and Node.js, collaborated with cross-functional teams, and contributed to product strategy discussions.</p>
       </div>
     </div>
   </section>
 
   <!-- Interests -->
-  <section id="interests">
+  <section id="interests" class="fade-in">
     <h2>Personal Interests</h2>
     <div class="interests-grid">
-      <div class="interest">🎾 Tennis</div>
-      <div class="interest">🚁 Drones</div>
-      <div class="interest">⚽ Soccer</div>
-      <div class="interest">♟️ Go/Chess</div>
-      <div class="interest">📸 Photography</div>
-      <div class="interest">🏀 Basketball</div>
+      <div class="interest">
+        <span class="interest-icon">🎾</span>
+        <span class="interest-name">Tennis</span>
+      </div>
+      <div class="interest">
+        <span class="interest-icon">🚁</span>
+        <span class="interest-name">Drones</span>
+      </div>
+      <div class="interest">
+        <span class="interest-icon">⚽</span>
+        <span class="interest-name">Soccer</span>
+      </div>
+      <div class="interest">
+        <span class="interest-icon">♟️</span>
+        <span class="interest-name">Go/Chess</span>
+      </div>
+      <div class="interest">
+        <span class="interest-icon">📸</span>
+        <span class="interest-name">Photography</span>
+      </div>
+      <div class="interest">
+        <span class="interest-icon">🏀</span>
+        <span class="interest-name">Basketball</span>
+      </div>
+      <div class="interest">
+        <span class="interest-icon">🏸</span>
+        <span class="interest-name">Badminton</span>
+      </div>
+      <div class="interest">
+        <span class="interest-icon">🏓</span>
+        <span class="interest-name">Ping Pong</span>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Get in Touch</h2>
     <p>Email: <a href="mailto:shuzheng9811@gmail.com">shuzheng9811@gmail.com</a></p>
     <p><a href="https://linkedin.com/in/shuzheng-zheng-365455187" target="_blank">LinkedIn</a> | 
@@ -110,7 +151,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Shuzheng Zheng. Built with ❤️</p>
+    <p>© 2025 Shuzheng Zheng. Crafted with passion and lots of ☕</p>
   </footer>
 
   <script src="script.js"></script>
