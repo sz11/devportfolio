@@ -243,8 +243,11 @@ body {
   white-space: nowrap;
   animation: rotateWord 24s linear infinite;
   background: linear-gradient(45deg, #fff, #e0e7ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 400;
   background-clip: text;
 }
 
