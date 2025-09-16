@@ -682,6 +682,16 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* Hide cursor on iPad */
+@media (max-width: 1024px) {
+  .cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: default !important;
+  }
+}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
