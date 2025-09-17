@@ -218,12 +218,20 @@ body {
 
 .scroll-down {
   position: absolute;
-  bottom: 30px;
+  bottom: 80px;
   font-size: 2rem;
   text-decoration: none;
   color: white;
   animation: bounce 2s infinite;
   transition: all 0.3s ease;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .scroll-down {
+    bottom: 100px;
+    font-size: 1.8rem;
+  }
 }
 
 .scroll-down:hover {
