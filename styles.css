@@ -33,6 +33,15 @@ body {
   cursor: none;
 }
 
+.touch-device .cursor {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.touch-device body {
+  cursor: default !important;
+}
+
 .cursor {
   position: fixed;
   width: 20px;
@@ -41,8 +50,9 @@ body {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  transition: all 0.1s ease;
-  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease-out;
+  transform: translate(-10px, -10px);
+  will-change: transform;
 }
 
 .cursor.hover {
@@ -664,10 +674,12 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-/* Hide cursor on iPad */
-@media (max-width: 1024px) {
+
+@media (max-width: 1024px), (pointer: coarse) {
   .cursor {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
   }
   
   body {

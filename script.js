@@ -1,13 +1,29 @@
-// Custom cursor
+// Detect touch devices and hide cursor
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  document.body.classList.add('touch-device');
+}
+
+// Custom cursor with performance optimization
 const cursor = document.querySelector('.cursor');
 let mouseX = 0, mouseY = 0;
+let isMoving = false;
+
+function updateCursorPosition() {
+  if (isMoving) {
+    cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    isMoving = false;
+  }
+  requestAnimationFrame(updateCursorPosition);
+}
 
 document.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top = mouseY + 'px';
+  isMoving = true;
 });
+
+// Start the animation loop
+requestAnimationFrame(updateCursorPosition);
 
 // Cursor hover effects
 document.querySelectorAll('a, button, .project-card, .interest').forEach(el => {
