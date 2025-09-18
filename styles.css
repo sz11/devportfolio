@@ -682,6 +682,37 @@ body {
   overflow: hidden;
 }
 
+.interest-link {
+  text-decoration: none;
+  color: #3b82f6;
+  transition: all 0.3s ease;
+  display: block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.interest-link:hover {
+  color: white;
+  background: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.interest-subtitle {
+  font-size: 0.85rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.interest:hover .interest-link {
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
 .interest::before {
   content: '';
   position: absolute;
