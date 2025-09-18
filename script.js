@@ -258,3 +258,44 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.hero h2').style.opacity = '1';
   }, 500);
 });
+
+// Modal functionality
+function openDemo(project) {
+  let videoSrc = '';
+  if (project === 'buddyup') {
+    videoSrc = 'demos/buddyup_demo.mov';
+  } else if (project === 'rail') {
+    videoSrc = 'demos/buddyup_demo.mov'; // Add your rail demo video path here
+  }
+  
+  if (videoSrc) {
+    // Replace 'YOUR_VIDEO_URL' with your actual video URL or file path
+    const modalHTML = `
+      <div id="demoModal" class="modal" style="display: block;">
+        <div class="modal-content">
+          <span class="close" onclick="closeDemo()">&times;</span>
+          <video width="100%" controls autoplay>
+            <source src="${videoSrc}" type="video/quicktime">
+            <source src="${videoSrc}" type="video/mp4">
+            <p>Your browser doesn't support HTML5 video. <a href="${videoSrc}">Download the video</a> instead.</p>
+          </video>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
+}
+
+function closeDemo() {
+  const modal = document.getElementById('demoModal');
+  if (modal) {
+    modal.remove();
+  }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('modal')) {
+    closeDemo();
+  }
+});
