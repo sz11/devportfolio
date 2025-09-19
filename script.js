@@ -265,7 +265,7 @@ function openDemo(project) {
   if (project === 'buddyup') {
     videoSrc = 'demos/buddyup_demo.mov';
   } else if (project === 'rail') {
-    videoSrc = 'demos/buddyup_demo.mov'; // Add your rail demo video path here
+    videoSrc = 'demos/rail_demo.mov'; // Add your rail demo video path here
   }
   
   if (videoSrc) {
